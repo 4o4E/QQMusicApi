@@ -8,6 +8,8 @@ var app = require('../app');
 var debug = require('debug')('qqmusicapi:server');
 var http = require('http');
 var config = require('./config');
+const cookie = process.env.COOKIE;
+cookie && require('../node/index').setCookie(cookie);
 
 /**
  * Get port from environment and store in Express.
