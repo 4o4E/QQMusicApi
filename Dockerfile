@@ -6,8 +6,6 @@ WORKDIR /home/qqmusic
 
 COPY . .
 
-VOLUME ["./data","./bin"]
-
 RUN yarn config set "strict-ssl" false -g
 RUN yarn config set registry https://registry.npmmirror.com
 RUN sed -i 's/registry.nlark.com/registry.npm.taobao.org/g' ./yarn.lock
